@@ -1,2 +1,3 @@
-function Airport(){}
-Airport.prototype.planes = function(){ return [];};
+var Thermostat = function() {
+  this.temperature = 20;
+};
