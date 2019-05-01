@@ -54,6 +54,11 @@ describe('Thermostat', function() {
          thermostat.powerSavingOff();
          expect(thermostat.powerSaving).toEqual(false);
        });
+       it('can be turned on', function() {
+         thermostat.powerSavingOff();
+         thermostat.powerSavingOn();
+         expect(thermostat.powerSaving).toEqual(true);
+       });
      });
    });
 });
