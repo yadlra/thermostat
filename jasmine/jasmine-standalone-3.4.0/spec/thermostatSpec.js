@@ -41,8 +41,15 @@ describe('Thermostat', function() {
        }
        expect(() => {
          thermostat.tempDown()}
-       ).toThrowError(TypeError,'Minimum temperature reached!');
+       ).toThrowError(RangeError,'Minimum temperature reached!');
+       });
      });
    });
- });
+   describe('power saving mode', function() {
+     describe('is on or off', function() {
+       it('is on by default', function() {
+         expect(thermostat.isPowerSaving()).toEqual(true);
+       });
+     });
+   });
 });

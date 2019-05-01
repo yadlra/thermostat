@@ -1,6 +1,11 @@
 var Thermostat = function() {
   this.temperature = 20;
   this.MINIMUN_TEMPERATURE = 10;
+  this.powerSaving = true;
+};
+
+Thermostat.prototype.isPowerSaving = function () {
+  return this.powerSaving;
 };
 
 Thermostat.prototype.getTemperature = function () {
@@ -13,7 +18,7 @@ Thermostat.prototype.tempUp = function () {
 
 Thermostat.prototype.tempDown = function () {
   if (this.temperature === this.MINIMUN_TEMPERATURE) {
-    throw new TypeError('Minimum temperature reached!');
+    throw new RangeError('Minimum temperature reached!');
   };
   this.temperature -= 1;
 };
