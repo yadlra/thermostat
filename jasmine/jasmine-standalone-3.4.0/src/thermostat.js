@@ -8,6 +8,10 @@ Thermostat.prototype.isPowerSaving = function () {
   return this.powerSaving;
 };
 
+Thermostat.prototype.powerSavingOff = function () {
+  this.powerSaving = false;
+};
+
 Thermostat.prototype.getTemperature = function () {
   return this.temperature;
 };

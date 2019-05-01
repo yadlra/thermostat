@@ -50,6 +50,10 @@ describe('Thermostat', function() {
        it('is on by default', function() {
          expect(thermostat.isPowerSaving()).toEqual(true);
        });
+       it('can be turned off', function() {
+         thermostat.powerSavingOff();
+         expect(thermostat.powerSaving).toEqual(false);
+       });
      });
    });
 });
