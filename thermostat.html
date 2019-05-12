@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="./src/style.css" rel="stylesheet" type="text/css" />
+    <script src="js/thermostat.js"></script>
+    <script type="text/javascript" src="./src/interface.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <title>Thermostat</title>
+  </head>
+  <body>
+  <h1>Thermostat</h1>
+<form><div>
+<input type = "button" name = "increase" value = "+" class="button" style="border:none" id = "tempUp">
+<input type = "button" name = "decrease" value = "-" class="button" style="border:none" id = "tempDown">
+</form>
+<h2><p>Power saving mode : &nbsp;</p><p id = "PSMstatus"></p></h2><br>
+<form><div>
+<input type = "button" name = "psm_on" value = "ON" class="button" style="border:none" id = "powerSavingOn">
+<input type = "button" name = "psm_off" value = "OFF" class="button" style="border:none" id = "powerSavingOff">
+<input type = "button" name = "reset" value = "Reset" class="button" style="border:none" id = "reset">
+</form>
+<div class="sidenav">
+  <h2 align="right"><p>London // &nbsp;</p><p id = "londonWeatherTemp"></p><p>°&nbsp;&nbsp;</p><p><p id = "londonWeather"></p></h2>
+  <h3 align="right"><p id = "currentTemp"></p><p>°</p></h3>
+</div>
+</body>
