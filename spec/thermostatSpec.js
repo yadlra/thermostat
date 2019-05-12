@@ -66,4 +66,18 @@ describe('Thermostat', function() {
        expect(thermostat.getTemperature()).toEqual(20);
      });
    });
+   describe('checks current energy usage', function(){
+     it('gives low energy usage below 18', function(){
+       thermostat.temperature = 17;
+       expect(thermostat.usage()).toEqual('low-usage');
+     });
+     it('gives medium energy usage below 25', function(){
+       thermostat.temperature < 25;
+       expect(thermostat.usage()).toEqual('medium-usage');
+     });
+     it('gives high usage if anything else', function(){
+       thermostat.temperature = 30;
+       expect(thermostat.usage()).toEqual('high-usage');
+     });
+   });
 });
