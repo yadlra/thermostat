@@ -1,11 +1,25 @@
 .low-usage {
-  color: green;
+  color: turquoise;
 }
 
 .medium-usage {
-  color: black;
+  color: yellow;
 }
 
 .high-usage {
   color: red;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  text-align: center;
+  padding: 70px 0;
+}
+
+h2 {
+  font-size: 200;
+}
+
+#current_city {
+  width: 170px;
 }

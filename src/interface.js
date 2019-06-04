@@ -1,8 +1,6 @@
 $(document).ready(function() {
   var thermostat = new Thermostat();
 
-  $("#currentTemp").text(thermostat.temperature);
-  $("#PSMstatus").text(thermostat.powerSaving);
 
   $('#tempUp').click(function() {
     thermostat.tempUp();
@@ -44,9 +42,9 @@ $('#select-city').submit(function(event) {
   displayWeather(city);
 });
 
-$.get('http://api.openweathermap.org/data/2.5/weather?q=London,uk&appid=a3d9eb01d4de82b9b8d0849ef604dbed&units=metric', function(data) {
-  $('#londonWeather').text(data.weather[0].main);
-});
-$.get('http://api.openweathermap.org/data/2.5/weather?q=London,uk&appid=a3d9eb01d4de82b9b8d0849ef604dbed&units=metric', function(data) {
-  $('#londonWeatherTemp').text(data.main.temp);
+$.get('http://api.openweathermap.org/data/2.5/weather?q=London,uk&appid=f011724912ca210c9f553a2894282145
+', function(data) {console.log(data);
+})
+$.get('http://api.openweathermap.org/data/2.5/weather?q=London,uk&appid=f011724912ca210c9f553a2894282145
+', function(data) {$('#londonWeatherTemp').text(data.main.temp);
 });

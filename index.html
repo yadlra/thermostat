@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Thermostat</title>
+
+    <script src="jquery.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootswatch/4.2.1/minty/bootstrap.min.css"
+    />
+    <script src="interface.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+
+  <body>
+    <div class="jumbotron">
+      <section>
+        <center>
+          <h2>Temperature set to:</h2>
+          <h1 id="temperature">25</h1>
+
+          <p>
+            <button type="button" class="btn btn-secondary" id="temp-up">
+              +
+            </button>
+            <button type="button" class="btn btn-primary" id="temp-down">
+              -
+            </button>
+            <button type="button" class="btn btn-info" id="temp-reset">
+              reset
+            </button>
+          </p>
+
+          <p>
+            Power Saving Mode Is <span id="power-saving-statuts">On</span>
+            <button type="button" class="btn btn-primary" id="powersaving-on">
+              PSM ON
+            </button>
+            <button
+              type="button"
+              class="btn btn-secondary"
+              id="powersaving-off"
+            >
+              PSM OFF
+            </button>
+          </p>
+        </center>
+      </section>
+    </div>
+
+    <script src="thermostat.js"></script>
+  </body>
+</html>
